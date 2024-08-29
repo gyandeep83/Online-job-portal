@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title> Online Job Portal</title>
+    </head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html, body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+}
+.container {
+	width: 1170px;
+	margin: 0px auto;
+}
+.width-100 {
+	width: 100%;
+	float: left;
+}
+.width-66 {
+	width: 66%;
+	float: left;
+}
+.width-50 {
+	float: left;
+	width: 50%;
+}
+.width-75 {
+	width: 75%;
+	float: left;
+}
+.width-33 {
+	width: 33%;
+	float: left;
+}
+.width-25 {
+	width: 25%;
+	float: left;
+}
+.header {
+	padding-top: 20px;
+	padding-bottom: 60px
+}
+.header-menu {
+	list-style: none;
+	margin-top: 10px;
+}
+.header-menu li {
+	float: left;
+	font-size: 15px;
+}
+.header-menu a {
+	font-size: 17px;
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+	padding: 10px;
+}
+.button-job-post {
+	background-color: #e34216;
+	color: white;
+	border: none;
+	border-radius: 2px;
+	font-size: 14px;
+	float: left;
+	padding: 10px;
+	text-decoration: none;
+}
+.button-resume {
+	background-color: #17acda;
+	color: white;
+	border: none;
+	border-radius: 2px;
+	font-size: 14px;
+	float: left;
+	margin-left: 10px;
+	padding: 10px;
+	text-decoration: none;
+}   
+.banner-section {
+	background-image: url("/static/banner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 350px;
+	position: relative;
+	width: 100%;
+}
+.banner-heading {
+	font-size: 40px;
+	color: white;
+	padding-top: 70px
+}
+.banner-para {
+	font-size: 15px;
+	color: #fff;
+	padding-top: 10px;
+}
+
+.search-sect {
+	margin-top: 40px;
+	width: 25%;
+	float: left;
+	position: relative;
+}
+.search-textbox {
+	height: 40px;
+	width: 100%;
+	padding-left: 10px;
+	border-top: none;
+	border-bottom: none;
+	border-color: #d9d9d9;
+	border-right: none;
+	border-width: 1px;
+}
+.search-button {
+	width: 100%;
+	height: 40px;
+	background-color: #e34216;
+	border: none;
+	color: white;
+}
+.search-sect .icons {
+	position: absolute;
+	top: 12px;
+	right: 10px
+}
+/*****SKILL SECTION SKILL SECTION SKILL SECTION*****/
+.skill-section {
+	background-color: #00000008;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.skill-list {
+	background-color: white;
+	width: 23%;
+	float: left;
+	margin-left: 15px;
+	padding-top: 10px;
+	border-radius: 5px;
+	padding-left: 8px;
+	padding-bottom: 10px;
+}
+.skill-list img {
+	width: 70px;
+	height: 70px;
+	border-radius: 100px;
+}
+.skill-list h4 {
+	font-size: 16px;
+	color: #313538;
+	font-weight: bold;
+	padding-left: 8px;
+	padding-top: 8px
+}
+.view-button {
+	width: 45%;
+	height: 20px;
+	border-radius: 20px;
+	border: none;
+	background-color: #e34216;
+	color: white;
+	font-size: 11px;
+	padding-left: 5px;
+	margin-top: 15px;
+}
+/*****RECENT JOB SECTION RECENT JOB SECTION*****/
+.recent-job {
+	padding-top: 50px;
+	background-color: #f0f3fa;
+	padding-bottom: 60px;
+}
+
+.recent-job-heading {
+	text-align: center;
+	color: #343a40;
+}
+
+.recent-job-sub-heading {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.recent-job-list {
+	float: left;
+	background-color: white;
+	padding: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.job-title {
+	font-size: 20px;
+}
+
+.job-company {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.job-company i {
+	color: orange;
+	margin-left: 10px;
+}
+
+.job-skill {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.job-apply-button {
+	background: blue;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	float: right;
+}
+/*****TOP COMPANY SECTION*****/
+.top-company {
+	padding-top: 50px;
+	background-color: #f9f9f9;
+	padding-bottom: 60px;
+}
+
+.top-company-heading {
+	text-align: center;
+	color: #343a40;
+}
+
+.top-company-sub-heading {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.company-list {
+	float: left;
+	background-color: white;
+	padding: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #e9e9e9;
+}
+
+.company-image img {
+	width: 100%;
+	height: auto;
+}
+
+.company-name {
+	color: #343a40;
+	font-size: 16px;
+}
+
+.company-rating i {
+	padding-left: 1px;
+	color: #f4dc1f;
+}
+
+.company-address {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #686868;
+}
+
+.company-opening {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #686868;
+}
+/******FEATURE SECTION******/
+.feature-sect {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.feature-panel {
+	background-color: #f9f9f9;
+	text-align: center;
+	padding: 30px;
+	border: 1px solid #f0f3fa;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.feature-title {
+	padding-top: 20px
+}
+
+.feature-desc {
+	margin-top: 10px;
+}
+
+.feature-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 80px;
+	background-color: white;
+}
+
+.feature-btn {
+	background-color: #1650e2;
+	height: 35px;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	font-size: 13px;
+	margin-top: 10px;
+	padding: 10px;
+}
+/******FOOTER SECTION******/
+.footer-list {
+	list-style: none;
+	line-height: 35px;
+	padding-top: 20px;
+}
+
+.footer-background {
+	background-color: #222328;
+	padding-top: 60px;
+	padding-bottom: 80px;
+	color: rgba(255, 255, 255, .86);
+}
+
+.get-in-touch {
+	list-style: none;
+	line-height: 15px;
+	padding-top: 20px
+}
+
+.get-in-touch img {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	border-radius: 0px;
+	float: left;
+	padding-top: 20px
+}
+
+.get-in-touch i {
+	float: left;
+	color: #eb372a;
+	font-size: 16px;
+	line-height: 15px;
+}
+
+.get-in-touch p {
+	padding-left: 30px;
+	color: rgba(255, 255, 255, .86);
+	margin-top: 20px
+}
+
+        </style>
+        <header>
+            <div class="width-100">
+                <div class="container header">
+                    <div class="width-25">
+                        <img src="/static/logo.png">
+                    </div>
+                    <div class="width-50">
+                        <ul class="header-menu ">
+                            <li>
+                                <a href="#">Home </a>
+                            </li>
+                            <li>
+                                <a href={% url 'all_jobs' %}>Jobs </a>
+                            </li>
+                            <li>
+                                <a href={% url 'company_list' %}>Companies </a>
+                            </li>
+                           
+                            <li>
+                                <a href={% url 'contact_details' %}>Contact Us </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="width-25">
+                        <a href={% url 'signup_view' %} class="button-job-post">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i> Register Now  </a>
+                        <a href={% url 'Feedback' %} class="button-resume">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Feedback </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="width-100 banner-section" id="searchSection">
+            <div class="container">
+            <form class="container" action="{% url 'all_jobs' %}" method="POST">
+                {% csrf_token %}
+                <h1 class="banner-heading">Find The Best Job For Your Future</h1>
+                <p class="banner-para">Filter by job title, company or location.</p>
+                <div class="search-sect">
+                    <input type="text" class="search-textbox" placeholder="company"  name="company">
+                </div>
+                <div class="search-sect">
+                    <input type="text" class="search-textbox" placeholder="Select Location" name="location">
+                    <i class="fa fa-life-ring icons" aria-hidden="true"></i>
+                </div>
+                <div class="search-sect">
+                    <input type="text" class="search-textbox" placeholder="Job title" name="title">
+                    <i class="fa fa-caret-down icons" aria-hidden="true"></i>
+                </div>
+                <div class="search-sect">
+                    <button class="search-button">
+                    <i class="fa fa-search " aria-hidden="true"></i> Search Here </button>
+                </div>
+                </form>
+                </div>
+            </div>
+        </div>
+        <!------CATEGORY SECTION CATEGORY SECTION CATEGORY SECTION ------>
+        <div class="width-100 skill-section">
+            <div class="container">
+                <div class="skill-list">
+                    <div class="width-33">
+                        <img class="skill-img" src="/static/skill-1.png">
+                    </div>
+                    <div class="width-66">
+                        <h4>It Sector</h4>
+                        <button class="view-button">7,600 jobs</button>
+                    </div>
+                </div>
+                <div class="skill-list">
+                    <div class="width-33">
+                        <img class="skill-img" src="/static/skill-2.png">
+                    </div>
+                    <div class="width-66">
+                        <h4>Call Center</h4>
+                        <button class="view-button">5,000 jobs</button>
+                    </div>
+                </div>
+                <div class="skill-list">
+                    <div class="width-33">
+                        <img class="skill-img" src="/static/skill-3.png">
+                    </div>
+                     <div class="width-66">
+                        <h4>BPO</h4>
+                        <button class="view-button">1,100 jobs</button>
+                    </div>
+                 </div>
+                <div class="skill-list">
+                    <div class="width-33">
+                        <img class="skill-img" src="/static/skill-4.png">
+                    </div>
+                    <div class="width-66">
+                        <h4>Sales</h4>
+                        <button class="view-button">2,345 jobs</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----NEW JOBS SECTION RECENT JOB SECTION RECENT JOB SECTION ----->
+        <div class="width-100 recent-job">
+            <div class="container">
+                <h2 class="recent-job-heading">NEW JOBS</h2>
+                <p class="recent-job-sub-heading">Get the list of all newly added jobs</p>
+                <!-----JOB LIST----->
+                <div class="width-50">
+                    <div class="recent-job-list">
+                        <div class="width-100">
+                            <h4 class="job-title">Associate Software engineer</h4>
+                            <p class="job-company">EY ltd. <i class="fa fa-star" aria-hidden="true"></i> | 546 Reviews </p>
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+                        </div>
+                        <div class="width-100">
+                           <p class="job-skill">
+                            <b>Skills : </b> JQUERY, BOOTSTRAP, PHOTOSHOP
+                            </p>
+                        </div>
+                        <div class="width-100">
+                            <a href="https://www.way2fresher.com/job/ey-hiring-fresher-associate-software-engineer/" class="job-apply-button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-----JOB LIST----->
+                <div class="width-50">
+                    <div class="recent-job-list">
+                        <div class="width-100">
+                            <h4 class="job-title">Software developer</h4>
+                            <p class="job-company">ERICSSON ltd. <i class="fa fa-star" aria-hidden="true"></i> | 967 Reviews </p>
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+                        </div>
+                        <div class="width-100">
+                           <p class="job-skill">
+                            <b>Skills : </b>Python, Cloud computing, Git
+                            </p>
+                        </div>
+                        <div class="width-100">
+                            <a href="https://www.way2fresher.com/job/ericsson-hiring-fresher-software-developer/" class="job-apply-button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-----JOB LIST----->
+                <div class="width-50">
+                    <div class="recent-job-list">
+                        <div class="width-100">
+                            <h4 class="job-title">SFDC application support</h4>
+                            <p class="job-company">Genpact ltd. <i class="fa fa-star" aria-hidden="true"></i> | 134 Reviews </p>
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+                        </div>
+                        <div class="width-100">
+                           <p class="job-skill">
+                            <b>Skills : </b>Proficient knowledge in Salesforce and analytical skills.
+                            </p>
+                        </div>
+                        <div class="width-100">
+                            <a href="https://www.way2fresher.com/job/genpact-hiring-fresher-software-application-salesforce-support/" class="job-apply-button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-----JOB LIST----->
+                <div class="width-50">
+                    <div class="recent-job-list">
+                        <div class="width-100">
+                            <h4 class="job-title">Graduate engineer trainee</h4>
+                            <p class="job-company">TATA power <i class="fa fa-star" aria-hidden="true"></i> | 114 Reviews </p>
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+                        </div>
+                        <div class="width-100">
+                           <p class="job-skill">
+                            <b>Skills : </b>Problem solving skills / Good customer service knowledge
+                            </p>
+                        </div>
+                        <div class="width-100">
+                            <a href="https://www.way2fresher.com/job/tata-power-recruitment-of-fresher-graduate-engineer-trainee/" class="job-apply-button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-----JOB LIST----->
+                <div class="width-50">
+                    <div class="recent-job-list">
+                        <div class="width-100">
+                            <h4 class="job-title">Frontend developer</h4>
+                            <p class="job-company">Barclays ltd. <i class="fa fa-star" aria-hidden="true"></i> | 456 Reviews </p>
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+                        </div>
+                        <div class="width-100">
+                           <p class="job-skill">
+                            <b>Skills : </b>HTML, CSS, JAVASCRPT
+                            </p>
+                        </div>
+                        <div class="width-100">
+                            <a href="https://www.way2fresher.com/job/barclays-hiring-fresher-software-front-end-developer/" class="job-apply-button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-----JOB LIST----->
+                <div class="width-50">
+                    <div class="recent-job-list">
+                        <div class="width-100">
+                            <h4 class="job-title">Software engineer</h4>
+                            <p class="job-company">Blackrock <i class="fa fa-star" aria-hidden="true"></i> | 100 Reviews </p>
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+                        </div>
+                        <div class="width-100">
+                           <p class="job-skill">
+                            <b>Skills : </b>Angular / React
+                            </p>
+                        </div>
+                        <div class="width-100">
+                            <a href="https://www.way2fresher.com/job/blackrock-fresher-software-engineer-recruitment/" class="job-apply-button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-----JOB LIST----->
+                <div class="width-50">
+                    <div class="recent-job-list">
+                        <div class="width-100">
+                            <h4 class="job-title">Data analyst</h4>
+                            <p class="job-company">HSBC <i class="fa fa-star" aria-hidden="true"></i> | 104 Reviews </p>
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+                        </div>
+                        <div class="width-100">
+                           <p class="job-skill">
+                            <b>Skills : </b>C, C++, JAVA, Python
+                            </p>
+                        </div>
+                        <div class="width-100">
+                            <a href="https://www.way2fresher.com/job/hsbc-recruiting-fresher-software-data-analyst/" class="job-apply-button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-----JOB LIST----->
+                <div class="width-50">
+                    <div class="recent-job-list">
+                        <div class="width-100">
+                            <h4 class="job-title">Software engineer</h4>
+                            <p class="job-company">Qualcomm <i class="fa fa-star" aria-hidden="true"></i> | 874 Reviews </p>
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+                        </div>
+                        <div class="width-33">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+                        </div>
+                        <div class="width-100">
+                           <p class="job-skill">
+                            <b>Skills : </b>C, C++
+                            </p>
+                        </div>
+                        <div class="width-100">
+                            <a href="https://www.way2fresher.com/job/qualcomm-hiring-fresher-software-automation-engineer-python-c/" class="job-apply-button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------TOP COMPANY SECTION TOP COMPANY SECTION TOP COMPANY SECTION----->
+        <div class="width-100 top-company">
+            <div class="container">
+                <h2 class="top-company-heading">Top Company Hiring</h2>
+                <p class="top-company-sub-heading">List of Top Company Hiring With Us</p>
+                <!-----START COMPANY LIST----->
+                <div class="width-25">
+                    <div class="company-list">
+                        <div class="width-100">
+                            <div class="width-25 company-image">
+                                <img src="/static/company-1.png">
+                            </div>
+                            <div class="width-75">
+                                <h4 class="company-name">Google</h4>
+                                <p class="company-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                </p>
+                                <p class="company-review">( 423 Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="width-50 company-address">California, USA</div>
+                        <div class="width-50 company-opening">255 Job Opening </div>
+                    </div>
+                </div>
+                <!-----START COMPANY LIST----->
+                <div class="width-25">
+                    <div class="company-list">
+                        <div class="width-100">
+                            <div class="width-25 company-image">
+                                <img src="/static/company-2.png">
+                            </div>
+                            <div class="width-75">
+                                <h4 class="company-name">Microsoft</h4>
+                                <p class="company-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                </p>
+                                <p class="company-review">( 124 Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="width-50 company-address">California, USA</div>
+                        <div class="width-50 company-opening">259 Job Opening </div>
+                    </div>
+                </div>
+                <!-----START COMPANY LIST----->
+                <div class="width-25">
+                    <div class="company-list">
+                        <div class="width-100">
+                            <div class="width-25 company-image">
+                                <img src="/static/company-3.png">
+                            </div>
+                            <div class="width-75">
+                                <h4 class="company-name">IBM</h4>
+                                <p class="company-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                </p>
+                                <p class="company-review">( 345 Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="width-50 company-address">New York, USA</div>
+                        <div class="width-50 company-opening">251 Job Opening </div>
+                    </div>
+                </div>
+                <!-----START COMPANY LIST----->
+                <div class="width-25">
+                    <div class="company-list">
+                        <div class="width-100">
+                            <div class="width-25 company-image">
+                                <img src="/static/company-4.png">
+                            </div>
+                            <div class="width-75">
+                                <h4 class="company-name">Apple</h4>
+                                <p class="company-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                </p>
+                                <p class="company-review">( 555 Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="width-50 company-address">California, USA</div>
+                        <div class="width-50 company-opening">298 Job Opening </div>
+                    </div>
+                </div>
+                <!-----START COMPANY LIST----->
+                <div class="width-25">
+                    <div class="company-list">
+                        <div class="width-100">
+                            <div class="width-25 company-image">
+                                <img src="/static/company-5.png">
+                            </div>
+                            <div class="width-75">
+                                <h4 class="company-name">Infosys</h4>
+                      
+                                <p class="company-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                </p>
+                                <p class="company-review">( 899 Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="width-50 company-address">Bengaluru, India</div>
+                        <div class="width-50 company-opening">255 Job Opening </div>
+                    </div>
+                </div>
+                <!-----START COMPANY LIST----->
+                <div class="width-25">
+                    <div class="company-list">
+                        <div class="width-100">
+                            <div class="width-25 company-image">
+                                <img src="/static/company-6.png">
+                            </div>
+                            <div class="width-75">
+                                <h4 class="company-name">Wipro</h4>
+                                <p class="company-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                </p>
+                                <p class="company-review">( 748 Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="width-50 company-address">Bengaluru, India</div>
+                        <div class="width-50 company-opening">250 Job Opening </div>
+                    </div>
+                </div>
+                <!-----START COMPANY LIST----->
+                <div class="width-25">
+                    <div class="company-list">
+                        <div class="width-100">
+                            <div class="width-25 company-image">
+                                <img src="/static/company-7.png">
+                            </div>
+                            <div class="width-75">
+                                <h4 class="company-name">HCL</h4>
+                                <p class="company-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                </p>
+                                <p class="company-review">( 133 Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="width-50 company-address">Bengaluru, India</div>
+                        <div class="width-50 company-opening">20 Job Opening </div>
+                    </div>
+                </div>
+                <!-----START COMPANY LIST----->
+                <div class="width-25">
+                    <div class="company-list">
+                        <div class="width-100">
+                            <div class="width-25 company-image">
+                                <img src="/static/company-8.png">
+                            </div>
+                            <div class="width-75">
+                                <h4 class="company-name">LinkedIn</h4>
+                                <p class="company-rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star " aria-hidden="true"></i>
+                                </p>
+                                <p class="company-review">( 200 Reviews)</p>
+                            </div>
+                        </div>
+                        <div class="width-50 company-address">California, USA</div>
+                        <div class="width-50 company-opening">50 Job Opening </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <!-------FEATURE SECTION FEATURE SECTION FEATURE SECTION------->
+        <div class="width-100 feature-sect">
+            <div class="container">
+                <div class="width-50">
+                    <div class="feature-panel">
+                        <img src="/static/feature-1.png" class="feature-img">
+                        <h4 class="feature-title">DO YOU WANT TO FIND A JOB ?</h4>
+                        <p class="feature-desc">Our website lets you to filter out jobs according to your convenience such as providing company name, location of job and job title.</p>
+                        <button class="feature-btn" id="findJobButton">Find Job</button>
+                    </div>
+                </div>
+                <div class="width-50">
+                    <div class="feature-panel">
+                        <img src="/static/feature-2.png" class="feature-img">
+                        <h4 class="feature-title"> ARE YOU LOOKING FOR COMPANY DETAILS ?</h4>
+                        <p class="feature-desc">Are you looking for details of companies which we have tie ups with? Click on this link to get the complete details and find your dream company to kickstart your career.</p>
+                        <button class="feature-btn" id="GetDetailsButton">Get details </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------FOOTER SECTION FOOTER SECTION FOOTER SECTION ------->
+        <footer>
+            <div class="width-100 footer-background">
+                <div class="container">
+                    <div class="width-25">
+                        <h4>QUICK LINKS</h4>
+                        <ul class="footer-list">
+                            <li>HOME</li>
+                            <li>JOBS</li>
+                            <li>COMPANIES</li>
+                            <li>CONTACT US</li>
+                        </ul>
+                    </div>
+                    <div class="width-25">
+                        <h4>JOB TYPE</h4>
+                        <ul class="footer-list">
+                            <li>Frontend Jobs In Bihar</li>
+                            <li>Website Designer Jobs In Mumbai</li>
+                            <li>Mobile App Jobs In Kolkata </li>
+                            <li>SEO Expert Jobs In Delhi</li>
+                        </ul>
+                    </div>
+                    <div class="width-25">
+                        <h4>RESOURCES</h4>
+                        <ul class="footer-list">
+                            <li>Home</li>
+                            <li>Post Free Job</li>
+                            <li>Recruiter Login</li>
+                            <li>Contact us</li>
+                        </ul>
+                    </div>
+                    <div class="width-25">
+                        <h4>GET IN TOUCH</h4>
+                        <ul class="get-in-touch">
+                            <li>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <p>E-MAIL: workwise@gmail.com</p>
+                            </li>
+                            <li>
+                                <i class="fa fa-headphones" aria-hidden="true"></i>
+                                <p>WHATS-APP: +9142606512</p>
+                            </li>
+                            <li>
+                                <i class="fa fa-fax" aria-hidden="true"></i>
+                                <p>CONTACT NO.: +9142606512</p>
+                            </li>
+                            <li>
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <p>WEBSITE: https://www.workwise.com</p>
+                            </li>
+                            <li>
+                                <img src="/static/icon-facebook.png">
+                            </li>
+                            <li>
+                                <img src="/static/icon-twitter.png">
+                            </li>
+                            <li>
+                                <img src="/static/icon-instagram.png">
+                            </li>
+                            <li>
+                                <img src="/static/icon-linkedin.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            // JavaScript code to scroll to the search section when the button is clicked
+            document.getElementById('findJobButton').addEventListener('click', function() {
+                document.getElementById('searchSection').scrollIntoView({ behavior: 'smooth' });
+            });
+            // JavaScript code to redirect to the company_list URL when the button is clicked
+        document.getElementById('GetDetailsButton').addEventListener('click', function() {
+            window.location.href = '/companies/'; // Change the URL as needed
+        });
+        </script>
+    </body>
+</html>

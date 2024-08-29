@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .apply-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Apply for Job</h2>
+    <div class="apply-info">
+        <p>You are applying for a job at {{ company_name }}.</p>
+    </div>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" id="name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" id="email" required>
+        
+        <label for="phone">Your Phone Number:</label>
+        <input type="text" name="phone" id="phone" required>
+        
+        <label for="cover_letter">Cover Letter:</label>
+        <textarea name="cover_letter" id="cover_letter" cols="30" rows="5" required></textarea>
+        
+        <label for="resume">Upload Resume:</label>
+        <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" required>
+        
+        <button type="submit">Submit Application</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    * {
+	margin: 0px;
+	padding: 0px;
+    }
+    html, body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+    }
+  .survicate-form-container {
+  width: 600px;
+  background-color: #ffff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  }
+
+  .survicate-form-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  }
+
+  .survicate-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  }
+
+  .survicate-form-group {
+  margin-bottom: 20px;
+  }
+
+  .survicate-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #333;
+  }
+
+  .survicate-form-group input,
+  .survicate-form-group textarea {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  }
+
+  .survicate-form-group textarea {
+  height: 100px;
+  }
+
+  .survicate-form-group input[type="submit"] {
+  background-color:rgb(63, 63, 174);
+  color: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  }
+
+  .survicate-form-group input[type="submit"]:hover {
+  background-color: #555;
+  }
+
+  .survicate-form-footer {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  font-size: 0.8rem;
+  }
+  </style>
+</head>
+<body>
+    <div class="survicate-form-container">
+        <h1 class="survicate-form-title">Contact Us</h1> <br>
+           <h3> Drop us a line through the form below and we'll get back to you </h3>
+        
+        <form class="survicate-form" method="POST">
+            {% csrf_token %}
+            <div class="survicate-form-group">
+                <label for="first-name">First Name*</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="survicate-form-group">
+                <label for="email-address">Email address*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="survicate-form-group">
+                <label for="job-role">Job Role</label>
+                <input type="text" id="role" name="role">
+            </div>
+            <div class="survicate-form-group">
+                <label for="company-domain">Company Domain*</label>
+                <input type="text" id="domain" name="domain" required>
+            </div>
+            <div class="survicate-form-group">
+                <label for="goals">Please tell us a bit about your goals, what are you hoping to achieve with Workwise ?*</label>
+                <textarea id="goals" name="goals" required></textarea>
+            </div>
+            <div class="survicate-form-group">
+                <input type="submit" value="Send">
+            </div>
+            <div class="survicate-form-footer">
+                We will store and process your personal data on terms defined here.
+            </div>
+        </form>
+    </div>
+</body>
+</html>

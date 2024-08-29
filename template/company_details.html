@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .company-details-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .company-details {
+            padding: 20px;
+            text-align: left;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .company-details p:first-child {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .company-details p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="company-details-container">
+        <div class="company-details">
+            <h2>{{ company.company_name }} Details</h2>
+            <img src="{{ company.imagepath }}" alt="not found" height="400" width="600">
+            <p>Description: {{ company.description }}</p>
+            <p>City: {{ company.city }}</p>
+        </div>
+    </div>
+</body>
+</html>
