@@ -10,6 +10,8 @@ user authentication and database management.
 
 <img width="1440" alt="Screenshot 2024-08-29 at 6 02 17 PM" src="https://github.com/user-attachments/assets/b7390957-c0b7-4ac4-bf03-e984942ce1d5">
 
-<img width="1440" alt="Screenshot 2024-08-29 at 6 02 17 PM" src="https://github.com/user-attachments/assets/73874783-eb79-4b2c-915a-288ed6ad4ae8">
+<img width="1440" alt="Screenshot 2024-08-29 at 6 03 08 PM" src="https://github.com/user-attachments/assets/e0f7f486-52e7-46ae-9fa1-fc30de3e49e3">
+
+<img width="1440" alt="Screenshot 2024-08-29 at 6 03 41 PM" src="https://github.com/user-attachments/assets/b703f113-e22d-4390-9e2d-2f0a468ccca8">
 
 
